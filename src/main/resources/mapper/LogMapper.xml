@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.td.mapper.LogMapper">
+
+	<!-- <cache type="com.td.redis.RedisCache"> <property name="eviction" value="LRU" 
+		/> <property name="flushInterval" value="6000000" /> <property name="size" 
+		value="1024" /> <property name="readOnly" value="false" /> </cache> -->
+
+	<insert id="save" parameterType="Log">
+		insert into
+		log(id,fromID,fromName,toID,toName,timeStamp,content,contentType,shopID,shopName)
+		values
+		(#{id},#{fromID},#{fromName},#{toID},#{toName},#{timeStamp},#{content},#{contentType},#{shopID},#{shopName});
+	</insert>
+
+	<select id="clientLog" resultType="com.td.bean.SocketJson">
+		select * from log where
+		((fromID = #{param1} and toID=#{param2}) or
+		(fromID =
+		#{param2} and
+		toID=#{param1}))
+		and DATE_SUB(CURDATE(),
+		INTERVAL 15 DAY)
+		&lt;=
+		timeStamp
+		order by timeStamp desc
+		limit 0,30;
+	</select>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.td.mapper.MasterMapper">
+
+	<!-- <cache type="com.td.redis.RedisCache"> <property name="eviction" value="LRU" 
+		/> <property name="flushInterval" value="6000000" /> <property name="size" 
+		value="1024" /> <property name="readOnly" value="false" /> </cache> -->
+
+	<insert id="save" parameterType="Master">
+		insert into
+		master(id,acc,password) values(#{id},#{acc},#{password});
+	</insert>
+
+	<select id="login" resultType="Master">
+		select id,acc from master where
+		acc = #{param1} and password= #{param2};
+	</select>
+</mapper>

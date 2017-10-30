@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.td.mapper.ServerMapper">
+
+	<!-- <cache type="com.td.redis.RedisCache"> <property name="eviction" value="LRU" 
+		/> <property name="flushInterval" value="6000000" /> <property name="size" 
+		value="1024" /> <property name="readOnly" value="false" /> </cache> -->
+
+	<select id="login" resultType="Server">
+		select
+		id,acc,name,note,timeStamp from server
+		where acc = #{param1} and
+		password= #{param2} and status = 1;
+	</select>
+
+	<insert id="save" parameterType="Server">
+		insert ignore into
+		server(id,acc,password,name,note,shopID,timeStamp)
+		values(#{id},#{acc},#{password},#{name},#{note},#{shopID},now());
+	</insert>
+
+	<update id="update" parameterType="Server">
+		update server
+		<set>
+			<if test="name != null and name != ''">
+				name=#{name},
+			</if>
+			<if test="note != null and note != ''">
+				note=#{note},
+			</if>
+			<if test="shopID != null and shopID != ''">
+				shopID=#{shopID},
+			</if>
+			<if test="password != null and password != ''">
+				password=#{password}
+			</if>
+			<if test="status != null and status != ''">
+				status=#{status}
+			</if>
+		</set>
+		where ID=#{id}
+	</update>
+
+	<select id="getServers" resultType="Server">
+		select * from server where
+		shopID = #{shopID} and status = 1;
+	</select>
+
+	<select id="get" resultType="Server">
+		select
+		s.id,s.acc,s.password,s.name,s.note,s.shopID,s.timeStamp,p.name as
+		shopName
+		from server s left join
+		shop p on p.id = s.shopid where
+		s.id =
+		#{id};
+	</select>
+
+	<select id="findCountByQuery" resultType="Integer">
+		select count(id) from server where
+		status = 1
+		<if test="name != null and name != ''">
+			and name like '%${name}%'
+		</if>
+		<if test="acc != null and acc != ''">
+			and acc like '%${acc}%'
+		</if>
+	</select>
+
+	<select id="findLimitByQuery" resultType="Server">
+		select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp
+		from server s left
+		join shop sp on s.shopID=sp.id
+		where s.status = 1
+		<if test="name != null and name != ''">
+			and s.name like '%${name}%'
+		</if>
+		<if test="acc != null and acc != ''">
+			and s.acc like '%${acc}%'
+		</if>
+		limit ${begin},${end};
+	</select>
+
+</mapper>

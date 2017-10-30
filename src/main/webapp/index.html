@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+	<p>聊天记录：</p>
+	<textarea rows="5" id="text"></textarea>
+	<br>
+	<input type="text" id="name">用户名
+	<br>
+	<button onclick='WebSocketTest()'>连接</button>
+	<br>
+	<input type="text" id="put">消息
+	<br>
+	<button onclick='sendMessageToServer(1)'>发送</button>
+	<br>
+</body>
+<script type="text/javascript">
+	var ws = null;
+	var name;
+	var id;
+	var toID;
+	function WebSocketTest() {
+		if (ws == null && "WebSocket" in window) {
+			console.log("您的浏览器支持 WebSocket!");
+
+			// 打开一个 web socket
+			//ws = new WebSocket("ws://192.168.1.23:12345/im");
+			ws = new WebSocket("ws://localhost:12345/im");
+			//ws = new WebSocket("ws://120.78.164.173:12345/im");
+
+			ws.onopen = function() {
+				// Web Socket 已连接上，使用 send() 方法发送数据
+				var obj = document.getElementById("name");
+				name = obj.value;
+				id = name;
+				if (name != "") {
+					ws.send('{"toID":"1","type":1,"fromID":"' + name
+							+ '","fromName":"' + name + '"}');
+				} else {
+					name = "666";
+					id = "1";
+					ws
+							.send('{"type":2,"fromID":"1","fromName":"' + name
+									+ '"}');
+				}
+			};
+
+			ws.onmessage = function(evt) {
+				var received_msg = evt.data;
+				console.log("接受到服务器：" + received_msg);
+				var json = JSON.parse(received_msg);
+				if (json.type == 0 || json.type == 1) {
+					toID = json.fromID;
+					var tObj = document.getElementById('text');
+					tObj.value = tObj.value + json.fromName + "("
+							+ new Date(json.sendTime).toLocaleString() + "):"
+							+ json.content + "\n";
+				}
+			};
+
+			ws.onclose = function() {
+				// 关闭 websocket
+				ws = null;
+				console.log("连接已关闭...");
+			};
+		} else {
+			// 浏览器不支持 WebSocket
+			console.log("您的浏览器不支持 WebSocket或已连接!");
+		}
+	}
+	// 通过Socket发送一条消息到服务器
+	function sendMessageToServer(message) {
+		var put = document.getElementById("put").value;
+		var mydate = new Date();
+		var text = '{"toID":"' + toID + '","type":0,"fromID":"' + id
+				+ '","content":"' + put + '","sendTime":' + mydate.getTime()
+				+ ',"fromName":"' + name + '","contentType":0}';
+		console.log("客户端发送：" + text);
+		if (text != null) {
+			var tObj = document.getElementById('text');
+			tObj.value = tObj.value + name + "(" + mydate.toLocaleString()
+					+ "):" + put + "\n";
+			//for (var i = 0; i < 10000; i++) {
+			ws.send(text);
+			//}
+		}
+	}
+</script>
+</html>
