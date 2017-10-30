@@ -7,7 +7,6 @@ import org.apache.ibatis.cache.Cache;
 
 import com.td.util.LogUtil;
 import com.td.util.SerializableUtil;
-import com.td.util.UUIDUtil;
 
 import redis.clients.jedis.Jedis;
 
@@ -28,7 +27,7 @@ public class RedisCache implements Cache {
 	}
 
 	public RedisCache() {
-		this.id = UUIDUtil.getUUID();
+		this.id = "defaultID";
 	}
 
 	public RedisCache(String id) {
@@ -62,12 +61,10 @@ public class RedisCache implements Cache {
 
 	public Object getObject(Object key) {
 		// 缓存穿透
-
 		byte[] values = this.redisClient.get(SerializableUtil.serialize(key));
 		// 算法：计算一定时间内没有命中的键，存起来 key-&gt;value
-		if (values == null) {
+		if (values == null)
 			return null;
-		}
 		Object obj = SerializableUtil.unserizlize(values);
 		return obj;
 	}
