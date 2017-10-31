@@ -51,7 +51,7 @@ function WebSocketTest() {
 					if(shopMsg.contentType == 2){
 						$(".message-board").append(`<li class="${shopMsg.fromID}"><p>${shopMsg.fromName} : ${nowTime}</p><p><img src="${shopMsg.content}"/></p></li>`);
 					}else if(shopMsg.contentType == 1){
-						$(".message-board").append(`<li class="${shopMsg.fromID}"><p>${shopMsg.fromName} : ${nowTime}</p><p><a href="${shopMsg.content}">${shopMsg.content}</a></p></li>`);
+						$(".message-board").append(`<li class="${shopMsg.fromID}"><p>${shopMsg.fromName} : ${nowTime}</p><a href="${shopMsg.content}">${shopMsg.content}</a></li>`);
 					}else {
 						$(".message-board").append(`<li class="${shopMsg.fromID}"><p>${shopMsg.fromName} : ${nowTime}</p><p>${shopMsg.content}</p></li>`);
 					}
@@ -134,7 +134,7 @@ function WebSocketTest() {
 		ws.onclose = function() {
 			// 关闭 websocket
 			ws = null;
-			alert("连接已关闭...");
+			console.log("连接已关闭...");
 		};
 	} else {
 		// 浏览器不支持 WebSocket

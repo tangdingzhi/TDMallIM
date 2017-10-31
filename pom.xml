@@ -143,9 +143,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>1.4.2.RELEASE</version><!--$NO-MVN-MAN-VER$-->
 				<configuration>
 					<mainClass>com.td.Application</mainClass>
-					<layout>ZIP</layout>
+					<layout>JAR</layout>
 				</configuration>
 				<executions>
 					<execution>

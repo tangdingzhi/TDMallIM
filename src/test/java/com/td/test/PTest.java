@@ -16,10 +16,11 @@ import com.td.bean.SocketJson;
 import com.td.util.JsonUtil;
 import com.td.util.MD5Util;
 import com.td.util.SHAUtil;
+import com.td.util.UUIDUtil;
 
 public class PTest {
 	public static void main(String[] args) {
-		System.out.println(password(""));
+		System.out.println(UUIDUtil.getUUID());
 	}
 
 	public static String password(String pass) {

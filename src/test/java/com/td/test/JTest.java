@@ -1,14 +1,19 @@
 package com.td.test;
 
-//import org.jasypt.encryption.StringEncryptor;
+//import java.util.Date;
+//
 //import org.junit.Test;
 //import org.junit.runner.RunWith;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.boot.test.context.SpringBootTest;
 //import org.springframework.test.context.junit4.SpringRunner;
 //
+//import com.td.domain.Server;
 //import com.td.service.ILogService;
 //import com.td.service.IServerService;
+//import com.td.util.MD5Util;
+//import com.td.util.SHAUtil;
+//import com.td.util.UUIDUtil;
 
 /**
  * @ClassName: JTest
@@ -43,6 +48,21 @@ public class JTest {
 	// @Test
 	// public void selServerTest() {
 	// serverService.findByQuery(new ServerQuery());
+	// }
+	// @Test
+	// public void addServerTest() {
+	// Server server = new Server();
+	// server.setNote("测试数据长……………………………………………………………………………………很长………………………………………………特别长………………………………………………………………………………");
+	// server.setPassword(SHAUtil.SHA512(MD5Util.md5("123")));
+	// server.setShopID("test");
+	// server.setStatus(1);
+	// for (int i = 0; i < 100; i++) {
+	// server.setAcc("test" + i);
+	// server.setName("测试客服" + i);
+	// server.setId(UUIDUtil.getUUID());
+	// serverService.save(server);
+	// System.out.println("完成:" + i);
+	// }
 	// }
 
 }
