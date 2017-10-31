@@ -1,9 +1,13 @@
 package com.td.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.td.domain.Master;
 import com.td.service.IMasterService;
 
 /**
@@ -17,4 +21,10 @@ import com.td.service.IMasterService;
 public class MasterController {
 	@Autowired
 	IMasterService masterService;
+
+	@RequestMapping(value = "/web", method = RequestMethod.GET)
+	public String web(Master master, HttpServletRequest reques) {
+		reques.setAttribute("master", master);
+		return "system";
+	}
 }

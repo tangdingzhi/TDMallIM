@@ -14,10 +14,16 @@ import javax.script.ScriptException;
 
 import com.td.bean.SocketJson;
 import com.td.util.JsonUtil;
+import com.td.util.MD5Util;
+import com.td.util.SHAUtil;
 
 public class PTest {
 	public static void main(String[] args) {
-		System.out.println(getRealIp());
+		System.out.println(password(""));
+	}
+
+	public static String password(String pass) {
+		return SHAUtil.SHA512(MD5Util.md5(pass));
 	}
 
 	public static String getRealIp() {

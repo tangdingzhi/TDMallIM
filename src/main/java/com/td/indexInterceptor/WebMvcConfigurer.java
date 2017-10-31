@@ -27,7 +27,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 	private String imgFolder = "/img/**";
 
 	/**
-	 * vue需要将页面全部跳转到index
+	 * 登陆权限验证
 	 */
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {

@@ -1,0 +1,141 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*  导航栏样式   */
+
+body, html {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+}
+#background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -100;
+}
+/*   content   */
+.content{
+	width: 378px;
+	height: auto;
+	margin: 287px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 1);
+	/*box-shadow: 0px 5px 30px 0px rgba(131, 146, 151, 0.75);*/
+	border-radius: 12px 12px 12px 12px;
+}
+.content .text{
+	font-size: 24px;
+	margin: 28px 0 18px 0;
+	letter-spacing: 1.9px;
+	line-height: 1;
+	color: #1ea0ec;
+}
+.content .inputBox{
+	width: 288px;
+	height: 48px;
+	border-bottom: 1px solid #ebebeb;
+}
+.content .inputBox input{
+	width: 260px;
+	font-size: 16px;
+	padding-left: 6px; 
+	line-height: 48px;
+	border: none;
+	outline: none;
+	background: none;
+	color: #000;
+}
+.radioIpt{
+	height: 40px;
+	width: 300px;
+    display: flex;
+	align-items: center;
+  	justify-content: space-around;
+  	margin:0 16px;
+}
+.radioIpt div{
+	height: 30px;
+	width: 100px;
+	display: flex;
+	align-items: center;
+}
+.radioIpt span{
+    font-size: 14px;
+    color: #333;
+}
+.radioIpt input{
+    width: 16px;
+    margin: 0 8px 0 0;
+}
+/*.content .errMsg{
+	width: 288px;
+	height: 18px;
+	padding-left: 6px; 
+	display: flex;
+	z-index: 99;
+}
+.content .errMsg img{
+	width: 16px;
+	height: 16px;
+	padding-top: 6px;
+}
+.content .errMsg p{
+	margin-left: 6px;
+	padding-top: 6px;
+	font-size: 12px;
+	color: #ec6661;
+}*/
+/*.remenber{
+	width: 288px;
+	height: 52px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.remenber p a{
+	font-size: 14px;
+	color: #1ea0ec;
+}
+.remenber p a:hover{
+	color: #ec6661;
+}*/
+.loginBtn{
+	width: 378px;
+	height: 59px;
+	background-color: rgba(30, 160, 236, 0.7);
+	border-radius: 0px 0px 12px 12px;
+    font-size: 24px;
+    letter-spacing: 12px;
+	color: #fff;
+	border: none;
+	outline: none;
+}
+.loginBtn:hover{
+	background: #1397e4;
+}
+.loginBtn:active{
+	background: #bbb;
+}
+footer{
+	width: 100%;
+	height: 100px;
+	background-color: rgba(22, 22, 22, 1);
+	position: fixed;
+	bottom: 0;
+}
+footer p{
+	width: 400px;
+	font-size: 16px;
+	line-height: 100px;
+	margin: 0 auto;
+	letter-spacing: 0.6px;
+	color: #ffffff;
+}

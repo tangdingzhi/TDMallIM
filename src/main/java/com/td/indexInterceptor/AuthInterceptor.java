@@ -30,7 +30,7 @@ public class AuthInterceptor implements HandlerInterceptor {
 			response.setCharacterEncoding("UTF-8");
 			response.setContentType("application/json; charset=utf-8");
 			if (userWeb == null)
-				response.getWriter().println(JsonUtil.reJsonFailure());
+				request.getRequestDispatcher("/index.html").forward(request, response);
 			else
 				response.getWriter().println(JsonUtil.reJsonObject(""));
 		} catch (Exception e) {
