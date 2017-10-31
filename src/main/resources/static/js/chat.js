@@ -5,26 +5,24 @@ var data = {
     index:0,
 };
 var fromId = "",toId = "",fname="",tname="";
-var shopname = "666";
-var shopID = "1";
+var shopname = "";
+var shopID = "";
 var obj;
 var className;
 var sendImgUrl;
 var pattern = /^(http(s)?:\/\/)?(www\.)?[\w-]+\.\w{2,4}(\/)?$/;
-
 
 WebSocketTest();
 
 
 
 function WebSocketTest() {
+	shopname = $(".username").text();
+	shopID = $("#server").val();
 	if (ws == null && "WebSocket" in window) {
      	ws = new WebSocket("ws://localhost:12345/im");
      	ws.onopen = function() {
 	        // Web Socket 已连接上，使用 send() 方法发送数据
-	        //商家客服
-	        $(".username").text(shopname)
-
 	        ws.send('{"toID":"","type":2,"fromID":"' + shopID + '","fromName":"' + shopname + '"}');
 	        //聊天界面加载完成后链接服务器
 	        //链接服务器成功后发送一条type=1；fromId=用户id，fromname=用户名字；toID等于商铺id
@@ -297,7 +295,7 @@ $("#file").change(function(e) {
 		var param = new FormData();
         param.append('file', file);
         $.ajax({
-            url: "http://192.168.1.23:8081/manage/upimg",
+            url: `${commonUrl}/manage/upimg`,
             type: 'POST',
             cache: false,
             contentType: false,
@@ -315,6 +313,12 @@ $("#file").change(function(e) {
 
 	}
 });
-
+//快捷键enter
+$(document).keyup(function(event){ 
+	console.log('in')
+    if(event.keyCode ==13){ 
+      $("#submitBtn").trigger("click"); 
+    } 
+});
 
 

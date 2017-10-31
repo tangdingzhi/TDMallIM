@@ -1,7 +1,5 @@
 package com.td.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,15 +23,14 @@ import net.sf.json.JSONObject;
  * @author 米雪铭
  * @date: 2017年10月23日 下午3:06:19
  */
-@RequestMapping("/server")
+@RequestMapping("/manage/server")
 @Controller
 public class ServerController {
 	@Autowired
 	IServerService serverService;
 
 	@RequestMapping(value = "/web", method = RequestMethod.GET)
-	public String web(Server server, HttpServletRequest reques) {
-		reques.setAttribute("server", server);
+	public String web() {
 		return "chat";
 	}
 

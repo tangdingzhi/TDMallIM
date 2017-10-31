@@ -1,21 +1,29 @@
 $(".loginBtn").on("click",function () {
+    var passwd = $(".password").val();
 	var user = {
         acc:$(".phone").val(),
-        password:$(".password").val(),
+        password: md5(passwd),
         type:$('input:radio:checked').val()
     };
-	console.log(user)
 	$.ajax({
-        url: "http://192.168.1.15:8081/login",
+        url: `${commonUrl}/login`,
         type: 'POST',
         data: user,
-        success: function (response) {
-        	console.log(response)
-        	window.location.href="http://192.168.1.15:8081/server"; 
+        success: function (data) {
+            if(data.type == 2){
+                window.location.href = `${commonUrl}/manage/server/web`;
+            }else if(data.type == 1) {
+                window.location.href = `${commonUrl}/manage/master/web`;
+            }
         },
-        error: function (response) {
-        	console.log('in')
-           
+        error: function (data) {
+
         }
     });
 })	
+
+$(document).keyup(function(event){ 
+    if(event.keyCode ==13){ 
+      $(".loginBtn").trigger("click"); 
+    } 
+});

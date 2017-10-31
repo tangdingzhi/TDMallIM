@@ -32,7 +32,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(authInterceptor).addPathPatterns("/manage/**").excludePathPatterns(imgFolder,
-				"/manage/upimg/**", "/manage/login/**");
+				"/manage/upimg/**", "/manage/server/**");
 		super.addInterceptors(registry);
 	}
 

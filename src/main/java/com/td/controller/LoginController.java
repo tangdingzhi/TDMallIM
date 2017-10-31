@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.td.domain.Master;
+import com.td.domain.Server;
 import com.td.service.IMasterService;
 import com.td.service.IServerService;
 import com.td.util.JsonUtil;
@@ -47,12 +48,12 @@ public class LoginController {
 		// 1管理员
 		case "1":
 			re = masterService.login(acc, shaPass);
-			if (null != re)
-				UserContext.setSessionUser((Master) re);
+			UserContext.setSessionUser((Master) re);
 			break;
 		// 2客服
 		case "2":
 			re = serverService.login(acc, shaPass);
+			UserContext.getSession().setAttribute("server", (Server) re);
 			break;
 		default:
 			break;
