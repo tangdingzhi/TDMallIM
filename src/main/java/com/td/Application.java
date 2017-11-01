@@ -4,7 +4,6 @@ import javax.jms.Queue;
 import javax.servlet.Filter;
 
 import org.apache.activemq.command.ActiveMQQueue;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -25,7 +24,6 @@ import com.td.util.StringUtil;
  * @date: 2017年10月26日 下午2:47:01
  */
 @SpringBootApplication
-@MapperScan(basePackages = "com.td.mapper") // 指定mapper类位置
 public class Application extends SpringBootServletInitializer implements CommandLineRunner, DisposableBean {
 
 	@Autowired

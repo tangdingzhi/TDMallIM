@@ -46,40 +46,40 @@ public class LogUtil {
 		Logger.getLogger(stack[1].getClassName()).log(LogUtil.class.getName(), Priority.FATAL, str, null);
 	}
 
-	public static void main(String[] args) {
-		// 测试字符串
-		testString();
+	// public static void main(String[] args) {
+	// // 测试字符串
+	// testString();
+	//
+	// // 测试数组
+	// // Object[] array = new Object[] { "测试array", "测试array1", "测试array2" };
+	// // logArray(array);
+	//
+	// // 测试List集合
+	// // //List放的是字符串
+	// // List<String> list = new ArrayList<String>();
+	// // list.add("测试list1");
+	// // list.add("测试list2");
+	// // list.add("测试list3");
+	// // //List放的是对象。
+	// // List<Student> list = new ArrayList<Student>();
+	// // for (int i = 0; i < 3; i++) {
+	// // Student s = new Student();
+	// // s.setId(i);
+	// // s.setName("name"+i);
+	// // list.add(s);
+	// // }
+	// // logList(list);
+	//
+	// // // 测试Map集合
+	// // Map<String, String> map = new HashMap<>();
+	// // map.put("1", "ss");
+	// // map.put("2", "@$#@%");
+	// // map.put("3", "中文");
+	// // map.put("4", "2342");
+	// // logMap(map);
+	// }
 
-		// 测试数组
-		// Object[] array = new Object[] { "测试array", "测试array1", "测试array2" };
-		// logArray(array);
-
-		// 测试List集合
-		// //List放的是字符串
-		// List<String> list = new ArrayList<String>();
-		// list.add("测试list1");
-		// list.add("测试list2");
-		// list.add("测试list3");
-		// //List放的是对象。
-		// List<Student> list = new ArrayList<Student>();
-		// for (int i = 0; i < 3; i++) {
-		// Student s = new Student();
-		// s.setId(i);
-		// s.setName("name"+i);
-		// list.add(s);
-		// }
-		// logList(list);
-
-		// // 测试Map集合
-		// Map<String, String> map = new HashMap<>();
-		// map.put("1", "ss");
-		// map.put("2", "@$#@%");
-		// map.put("3", "中文");
-		// map.put("4", "2342");
-		// logMap(map);
-	}
-
-	private static void testString() {
+	public static void testString() {
 		String debug = "debug信息";
 		String warn = "warn信息";
 		String info = "info信息";

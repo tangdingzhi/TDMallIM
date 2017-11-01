@@ -17,6 +17,7 @@ import com.td.service.IMasterService;
 import com.td.service.IServerService;
 import com.td.util.JsonUtil;
 import com.td.util.SHAUtil;
+import com.td.util.StringUtil;
 import com.td.util.UserContext;
 
 import net.sf.json.JSONObject;
@@ -42,6 +43,12 @@ public class LoginController {
 	@ResponseBody
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public JSONObject login(String acc, String password, String type, HttpServletRequest request) {
+		if (StringUtil.isNull(acc))
+			return JsonUtil.reJsonMsg("账号不能为空！");
+		if (StringUtil.isNull(password))
+			return JsonUtil.reJsonMsg("密码不能为空！");
+		if (StringUtil.isNull(type))
+			type = "2";
 		String shaPass = SHAUtil.SHA512(password);
 		Object re = null;
 		switch (type) {
