@@ -47,8 +47,9 @@ public class Application extends SpringBootServletInitializer implements Command
 	}
 
 	/**
-	 * 配置过滤器
-	 * 
+	 * @Title: someFilterRegistration 
+	 * @Description: 配置过滤器
+	 * @author 米雪铭
 	 * @return
 	 */
 	@Bean

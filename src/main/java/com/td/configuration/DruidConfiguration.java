@@ -25,7 +25,7 @@ public class DruidConfiguration {
 
 	@Bean
 	public ServletRegistrationBean<StatViewServlet> druidServlet() {
-		LogUtil.info("init Druid Servlet Configuration ");
+		LogUtil.info("初始化Druid连接池服务！ ");
 		ServletRegistrationBean<StatViewServlet> servletRegistrationBean = new ServletRegistrationBean<>();
 		servletRegistrationBean.setServlet(new StatViewServlet());
 		servletRegistrationBean.addUrlMappings("/druid/*");

@@ -1,4 +1,4 @@
-package com.td.indexInterceptor;
+package com.td.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -7,9 +7,11 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import com.td.indexInterceptor.AuthInterceptor;
+
 /**
  * @ClassName: WebMvcConfigurer
- * @Description: 配置拦截器
+ * @Description: 配置web拦截器
  * @author 米雪铭
  * @date: 2017年10月19日 下午3:15:00
  */
@@ -20,7 +22,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 
 	@Autowired
 	AuthInterceptor authInterceptor;
-
+	
 	@Value("${file.localPath}")
 	private String localPath;
 
