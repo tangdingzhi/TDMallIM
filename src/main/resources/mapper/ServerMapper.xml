@@ -10,9 +10,11 @@
 
 	<select id="login" resultType="Server">
 		select
-		id,acc,name,note,timeStamp from server
+		id,acc,name,note,timeStamp
+		from server
 		where acc = #{param1} and
-		password= #{param2} and status = 1;
+		password= #{param2} and status =
+		1;
 	</select>
 
 	<insert id="save" parameterType="Server">
@@ -36,7 +38,7 @@
 			<if test="password != null and password != ''">
 				password=#{password}
 			</if>
-			<if test="status != null and status != ''">
+			<if test="status != null">
 				status=#{status}
 			</if>
 		</set>
@@ -62,10 +64,7 @@
 		select count(id) from server where
 		status = 1
 		<if test="name != null and name != ''">
-			and name like '%${name}%'
-		</if>
-		<if test="acc != null and acc != ''">
-			and acc like '%${acc}%'
+			and (name like '%${name}%' or acc like '%${name}%')
 		</if>
 	</select>
 
@@ -75,11 +74,9 @@
 		join shop sp on s.shopID=sp.id
 		where s.status = 1
 		<if test="name != null and name != ''">
-			and s.name like '%${name}%'
+			and (s.name like '%${name}%' or s.acc like '%${name}%')
 		</if>
-		<if test="acc != null and acc != ''">
-			and s.acc like '%${acc}%'
-		</if>
+		order by s.timeStamp desc
 		limit ${begin},${end};
 	</select>
 

@@ -20,7 +20,7 @@ function WebSocketTest() {
 	shopname = $(".username").text();
 	shopID = $("#server").val();
 	if (ws == null && "WebSocket" in window) {
-     	ws = new WebSocket("ws://localhost:12345/im");
+     	ws = new WebSocket(`ws:/\/${wsUrl}/im`);
      	ws.onopen = function() {
 	        // Web Socket 已连接上，使用 send() 方法发送数据
 	        ws.send('{"toID":"","type":2,"fromID":"' + shopID + '","fromName":"' + shopname + '"}');
@@ -40,7 +40,6 @@ function WebSocketTest() {
 				tname = shopMsg.fromName;//客服发送消息时的名字
 				toId = shopMsg.fromID;//客服发送消息时的ID
 			}
-			console.log(shopMsg)
 			//添加数据
 			switch (shopMsg.type) {
 				case 0:
@@ -134,7 +133,6 @@ function WebSocketTest() {
 		ws.onclose = function() {
 			// 关闭 websocket
 			ws = null;
-			console.log("连接已关闭...");
 		};
 	} else {
 		// 浏览器不支持 WebSocket
@@ -154,7 +152,6 @@ function sendMessageToServer(message) {
 	obj.type = 0;
 	obj.sendTime = new Date().getTime();
 	let str = $("div .test_box").text();
-	console.log(pattern.test(str));
 
 	//1.如果是图片；2.如果是链接；3.如果是文本
 	if($("div .test_box").find("img").length == 1){
@@ -170,12 +167,10 @@ function sendMessageToServer(message) {
 	}
 	
 	let textMsg = JSON.stringify(obj);
-	console.log(textMsg)
 	if (textMsg !== null && obj.toID !== shopID) {
 		ws.send(textMsg);
 		let unixTimestamp = new Date(obj.sendTime) ;
 		var nowTime = mend(unixTimestamp)
-		console.log(nowTime)
 		if ($("div .test_box").find("img").length == 1) {
 			$(".message-board").append(`<li class='left ${obj.toID}'><p>${shopname} : ${nowTime}</p><img src="${obj.content}"/></li>`);
 			$("div.test_box").text("")
@@ -204,7 +199,6 @@ function isJSON(str) {
 	        }
 
 	    } catch(e) {
-	        console.log(e);
 	        return false;
 	    }
 	}
@@ -285,7 +279,6 @@ function mend(unixTimestamp){
 
 //上传图片
 $("#file").change(function(e) {
-	console.log(e.target.files)
 	var file = e.target.files[0];
 	var reader = new FileReader();
 	reader.readAsDataURL(file);
@@ -303,10 +296,8 @@ $("#file").change(function(e) {
             data: param,
             success: function (response) {
             	sendImgUrl = response.data
-            	console.log(sendImgUrl)
             },
             error: function (response) {
-            	console.log('in')
                
             }
         });
@@ -315,7 +306,6 @@ $("#file").change(function(e) {
 });
 //快捷键enter
 $(document).keyup(function(event){ 
-	console.log('in')
     if(event.keyCode ==13){ 
       $("#submitBtn").trigger("click"); 
     } 

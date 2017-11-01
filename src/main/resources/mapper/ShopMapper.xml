@@ -38,6 +38,7 @@
 				and name like '%${name}%'
 			</if>
 		</where>
+		order by timeStamp desc
 		limit ${begin},${end};
 	</select>
 

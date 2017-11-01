@@ -30,7 +30,7 @@ public class UserContext {
 	}
 
 	public static HttpSession getSession() {
-		LogUtil.info("session:" + getRequest().getSession());
+		// LogUtil.debug("session:" + getRequest().getSession());
 		return getRequest().getSession();
 	}
 

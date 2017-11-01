@@ -114,6 +114,8 @@
 		<!-- 数据库密码加密 -->
 		<!-- <dependency> <groupId>com.github.ulisesbocchio</groupId> <artifactId>jasypt-spring-boot-starter</artifactId> 
 			<version>1.16</version> </dependency> -->
+		<!-- springboot 监控 -->
+
 	</dependencies>
 
 	<repositories>
@@ -143,7 +145,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>1.4.2.RELEASE</version><!--$NO-MVN-MAN-VER$-->
+				<version>1.4.2.RELEASE</version><!--$NO-MVN-MAN-VER$ -->
 				<configuration>
 					<mainClass>com.td.Application</mainClass>
 					<layout>JAR</layout>

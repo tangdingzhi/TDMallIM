@@ -44,9 +44,12 @@ public class ServerController {
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	@ResponseBody
 	public JSONObject save(Server server) {
-		if (StringUtil.isNotNull(server.getId()))
+		if (StringUtil.isNotNull(server.getId())) {
+			// 修改的时候不能更改状态值
+			server.setStatus(null);
 			return serverService.update(server) > 0 ? JsonUtil.reJsonObject(server.getId())
 					: JsonUtil.reJsonMsg("修改客服信息失败！");
+		}
 		if (StringUtil.isNull(server.getName()))
 			return JsonUtil.reJsonMsg("客服名称不能为空 ！");
 		if (StringUtil.isNull(server.getAcc()))
