@@ -5,9 +5,9 @@
 		<!-- 所有映射器中配置的缓存的全局开关 -->
 		<setting name="cacheEnabled" value="false" />
 		<!-- 延迟加载的全局开关 配置二级缓存时将此属性关闭 -->
-		<setting name="lazyLoadingEnabled" value="false" />
+		<setting name="lazyLoadingEnabled" value="true" />
 		<!-- 关联对象加载 配置二级缓存时将此属性关闭 -->
-		<setting name="aggressiveLazyLoading" value="false" />
+		<setting name="aggressiveLazyLoading" value="true" />
 		<!-- 是否允许单一语句返回多结果集 -->
 		<setting name="multipleResultSetsEnabled" value="true" />
 		<!-- 使用列标签代替列名 -->

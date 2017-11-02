@@ -4,10 +4,6 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.td.mapper.ServerMapper">
 
-	<!-- <cache type="com.td.redis.RedisCache"> <property name="eviction" value="LRU" 
-		/> <property name="flushInterval" value="6000000" /> <property name="size" 
-		value="1024" /> <property name="readOnly" value="false" /> </cache> -->
-
 	<select id="login" resultType="Server">
 		select
 		id,acc,name,note,timeStamp

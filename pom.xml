@@ -113,11 +113,8 @@
 			<classifier>jdk15</classifier>
 		</dependency>
 		<!-- redis -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-redis</artifactId>
-			<version>1.4.7.RELEASE</version>
-		</dependency>
+		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-redis</artifactId> 
+			<version>1.4.7.RELEASE</version> </dependency> -->
 		<!-- 数据库密码加密 -->
 		<!-- <dependency> <groupId>com.github.ulisesbocchio</groupId> <artifactId>jasypt-spring-boot-starter</artifactId> 
 			<version>1.16</version> </dependency> -->

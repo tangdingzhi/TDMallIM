@@ -1,6 +1,8 @@
 package com.td.configuration;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
+import com.td.util.LogUtil;
+
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
@@ -41,6 +43,7 @@ public class MyBatisConfig {
 		sqlSessionFactoryBean.setMapperLocations(pathMatchingResourcePatternResolver.getResources(packageSearchPath));
 		// 设置datasource
 		sqlSessionFactoryBean.setDataSource(dataSource());
+		LogUtil.info("配置MyBatis和druid完成！");
 		return sqlSessionFactoryBean;
 	}
 
@@ -68,8 +71,8 @@ public class MyBatisConfig {
 		properties.put(DruidDataSourceFactory.PROP_TESTWHILEIDLE, "true");
 		properties.put(DruidDataSourceFactory.PROP_TESTONBORROW, "false");
 		properties.put(DruidDataSourceFactory.PROP_TESTONRETURN, "false");
-		// 添加统计、SQL注入、日志过滤器
-		properties.put(DruidDataSourceFactory.PROP_FILTERS, "stat,wall,log4j");
+		// 添加统计、SQL注入
+		properties.put(DruidDataSourceFactory.PROP_FILTERS, "stat,wall");
 		// sql合并，慢查询定义为2s
 		properties.put(DruidDataSourceFactory.PROP_CONNECTIONPROPERTIES,
 				"druid.stat.mergeSql=true;druid.stat.slowSqlMillis=2000");
