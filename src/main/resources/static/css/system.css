@@ -9,7 +9,7 @@ body{
 /*  导航栏样式   */
 header{
 	height: 80px;
-	background: rgba(22,22,22,1);
+	background: rgba(30, 160, 236, 1);
 }
 header p{
 	width: 600px;
@@ -39,15 +39,21 @@ header p{
 	height: 40px;
 	line-height: 40px;
 	color: #eee;
-	background: #595959;
+	background: rgba(64, 158, 255, 0.6);
 }
 .content tr td{
 	width: 200px;
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
-	background: #eee;
+	background: rgba(64, 158, 255, 0.21);
 	border-bottom: 1px solid #c4c4c4;
+}
+.content tr td:nth-child(4){
+	width: 300px;
+}
+.content tr th:nth-child(3){
+	width: 360px;
 }
 #input-button{
 	margin:0 0 10px;
@@ -66,20 +72,21 @@ header p{
 #input-button button{
 	width: 60px;
 	height: 28px;
+	margin-left: 10px;
 	border-radius: 4px 4px 4px 4px;
-	background-color: rgba(88, 88, 88, 1);
+	background-color: rgba(30, 160, 236, 1);
 	border: none;
 	outline: none;
 	font-size: 14px;
 	color: #fff;
 }
 #input-button button:hover{
-	background: rgba(70, 70, 70, 1);
+	background: rgba(30, 160, 236, 0.7);
 }
 #input-button button:active{
-	background: #bbb;
+	background: #3a8ee6;
 }
-.content button{
+.content tbody button{
 	width: 54px;
 	height: 30px;
 	border-radius: 4px;
@@ -202,15 +209,16 @@ header p{
 footer{
 	width: 100%;
 	height: 100px;
-	background-color: rgba(22, 22, 22, 1);
+	background-color: rgba(64, 158, 255, 1);
 	position: fixed;
 	bottom: 0;
 }
 footer p{
-	width: 400px;
-	font-size: 16px;
-	line-height: 100px;
-	margin: 0 auto;
-	letter-spacing: 0.6px;
-	color: #ffffff;
+  width: 1126px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 100px;
+  letter-spacing: 0.6px;
+  color: #ffffff;
 }

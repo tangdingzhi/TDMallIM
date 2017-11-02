@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>客服管理</title>
+	<title>通兑商城客服后台管理系统</title>
 	<link rel="stylesheet" type="text/css" href="/css/system.css">
 	<link rel="stylesheet" type="text/css" href="/css/paging.css">
 </head>
@@ -63,7 +63,7 @@
 
 
 	<footer>
-		<p>Copyright © 2017 通兑商城 All Rights Reserved.</p>
+		<p>Copyright © 2017 通兑商城客服后台管理系统 All Rights Reserved.</p>
 	</footer>
 	<script src="/js/jquery-3.2.1.min.js"></script>
 	<script src="/js/paging.js"></script>

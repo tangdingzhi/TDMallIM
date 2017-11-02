@@ -29,7 +29,7 @@ body{
   max-height: 740px;
   border-radius: 3px;
   border-top-right-radius: 0px;
-  background: rgba(0, 0, 0, 0.5);
+  background:  rgba(30, 160, 236, 0.7);
   color: #eee;
 }
 .user-info{
@@ -48,9 +48,9 @@ body{
   display: inline-block;
   width: 8em;
   line-height: 1.5;
-  font-size: 12px;
+  font-size: 14px;
   padding-left: 4px;
-  color: rgb(100, 255, 255);
+  color: rgb(244, 255, 255);
   font-weight: 200;
 }
 .utils p:last-child {
@@ -132,9 +132,11 @@ body{
 }
 .message-board .left p:nth-child(2){
   display: inline-block;
+  width:500px;
+  height:auto;
   line-height: 1.5;
   padding: 6px 20px;
-  text-align: center;
+  text-align: left;
   color:#232323;
 }
 .message-board-head{
@@ -222,10 +224,10 @@ label{
   border: none;
   outline: none;
   color: #fff;
-  background: #162230;
+  background: rgba(30, 160, 236, 1);
 }
 .message-input .input-bottom button:hover{
-  background: #4A4F61;
+  background:  rgba(30, 160, 236, 0.7);
 }
 .message-input .input-bottom button:active{
   background: #c1c1c1;
@@ -247,10 +249,11 @@ footer{
   bottom: 0;
 }
 footer p{
-  width: 400px;
+  width: 1126px;
+  text-align: center;
+  margin: 0 auto;
   font-size: 16px;
   line-height: 100px;
-  margin: 0 auto;
   letter-spacing: 0.6px;
   color: #ffffff;
 }

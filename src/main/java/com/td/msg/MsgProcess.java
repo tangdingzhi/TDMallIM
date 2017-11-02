@@ -14,6 +14,7 @@ import com.td.service.IServerService;
 import com.td.util.ClientUtil;
 import com.td.util.JsonUtil;
 import com.td.util.LogUtil;
+import com.td.util.StringUtil;
 import com.td.util.ThreadPoolUtil;
 
 import io.netty.channel.Channel;
@@ -49,6 +50,26 @@ public class MsgProcess {
 		SocketJson bean;
 		try {
 			bean = (SocketJson) JsonUtil.toBean(msg, SocketJson.class);
+			if (StringUtil.isNotNull(bean.getFromID()) && bean.getFromID().length() > 32) {
+				channel.writeAndFlush(MsgSend.text(new SocketJson("", "fromID过长，最长为32！", 5)));
+				return;
+			}
+			if (StringUtil.isNotNull(bean.getFromName()) && bean.getFromName().length() > 32) {
+				channel.writeAndFlush(MsgSend.text(new SocketJson("", "fromName过长，最长为32！", 5)));
+				return;
+			}
+			if (StringUtil.isNotNull(bean.getToID()) && bean.getToID().length() > 32) {
+				channel.writeAndFlush(MsgSend.text(new SocketJson("", "toID过长，最长为32！", 5)));
+				return;
+			}
+			if (StringUtil.isNotNull(bean.getToName()) && bean.getToName().length() > 32) {
+				channel.writeAndFlush(MsgSend.text(new SocketJson("", "toName过长，最长为32！", 5)));
+				return;
+			}
+			if (StringUtil.isNotNull(bean.getContent()) && bean.getContent().length() > 255) {
+				channel.writeAndFlush(MsgSend.text(new SocketJson("", "content过长，最长为255！", 5)));
+				return;
+			}
 		} catch (Exception e) {
 			channel.writeAndFlush(MsgSend.text(new SocketJson("", "数据格式错误！", 8)));
 			return;

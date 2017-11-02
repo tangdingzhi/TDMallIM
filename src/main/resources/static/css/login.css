@@ -32,10 +32,12 @@ body, html {
 	border-radius: 12px 12px 12px 12px;
 }
 .content .text{
+	width: 378px;
 	font-size: 24px;
 	margin: 28px 0 18px 0;
-	letter-spacing: 1.9px;
+	letter-spacing: 2px;
 	line-height: 1;
+	text-align: center;
 	color: #1ea0ec;
 }
 .content .inputBox{
@@ -75,48 +77,22 @@ body, html {
     width: 16px;
     margin: 0 8px 0 0;
 }
-/*.content .errMsg{
-	width: 288px;
-	height: 18px;
-	padding-left: 6px; 
-	display: flex;
-	z-index: 99;
-}
-.content .errMsg img{
-	width: 16px;
-	height: 16px;
-	padding-top: 6px;
-}
-.content .errMsg p{
-	margin-left: 6px;
-	padding-top: 6px;
-	font-size: 12px;
-	color: #ec6661;
-}*/
-/*.remenber{
-	width: 288px;
-	height: 52px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-.remenber p a{
-	font-size: 14px;
-	color: #1ea0ec;
-}
-.remenber p a:hover{
-	color: #ec6661;
-}*/
 .loginBtn{
 	width: 378px;
 	height: 59px;
 	background-color: rgba(30, 160, 236, 0.7);
 	border-radius: 0px 0px 12px 12px;
-    font-size: 24px;
-    letter-spacing: 12px;
-	color: #fff;
 	border: none;
 	outline: none;
+}
+.loginBtn p{
+	width: 100px;
+	font-size: 24px;
+	text-align: center;
+	margin: 0 auto;
+	margin-right: 130px;
+	color: #fff;
+	letter-spacing:20px;
 }
 .loginBtn:hover{
 	background: #1397e4;
@@ -127,14 +103,15 @@ body, html {
 footer{
 	width: 100%;
 	height: 100px;
-	background-color: rgba(22, 22, 22, 1);
+	background-color: rgba(30, 160, 236, 0.9);
 	position: fixed;
 	bottom: 0;
 }
 footer p{
-	width: 400px;
+	width: 1126px;
 	font-size: 16px;
 	line-height: 100px;
+	text-align: center;
 	margin: 0 auto;
 	letter-spacing: 0.6px;
 	color: #ffffff;

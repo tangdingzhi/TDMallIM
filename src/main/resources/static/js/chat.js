@@ -13,8 +13,24 @@ var sendImgUrl;
 var pattern = /^(http(s)?:\/\/)?(www\.)?[\w-]+\.\w{2,4}(\/)?$/;
 
 WebSocketTest();
-
-
+//禁止F5刷新
+function f_DisableF5Refresh(event) {
+	var e = event || window.event;
+	var keyCode = e.keyCode || e.which;
+	  if(keyCode == 116) {
+	    if(e.preventDefault) {
+	      e.preventDefault();
+	    } else {
+	      e.keyCode = 0;
+	      e.returnValue = false;
+	    }
+	  }
+}
+if(document.addEventListener) {
+    document.addEventListener('keydown', f_DisableF5Refresh, false);
+} else {
+    document.attachEvent('onkeydown', f_DisableF5Refresh);
+}
 
 function WebSocketTest() {
 	shopname = $(".username").text();
@@ -152,7 +168,6 @@ function sendMessageToServer(message) {
 	obj.type = 0;
 	obj.sendTime = new Date().getTime();
 	let str = $("div .test_box").text();
-
 	//1.如果是图片；2.如果是链接；3.如果是文本
 	if($("div .test_box").find("img").length == 1){
 		obj.content = sendImgUrl
@@ -167,7 +182,7 @@ function sendMessageToServer(message) {
 	}
 	
 	let textMsg = JSON.stringify(obj);
-	if (textMsg !== null && obj.toID !== shopID) {
+	if (textMsg !== null && obj.toID !== shopID && str.length < 256) {
 		ws.send(textMsg);
 		let unixTimestamp = new Date(obj.sendTime) ;
 		var nowTime = mend(unixTimestamp)
@@ -182,6 +197,8 @@ function sendMessageToServer(message) {
 			$("div.test_box").text("")
 		}
 		showdiv(obj.toID)
+	}else{
+		alert("内容过多，不能发送!")
 	}
 	$('.message-board').scrollTop( $('.message-board')[0].scrollHeight );
 }
@@ -310,5 +327,7 @@ $(document).keyup(function(event){
       $("#submitBtn").trigger("click"); 
     } 
 });
+
+
 
 

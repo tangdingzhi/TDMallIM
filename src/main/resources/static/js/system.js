@@ -3,7 +3,6 @@ var currentPage = {
     page: 1,
     name:"",
 };
-var oldshop;
 var oldAccID;
 var totalPage = 0,pageCount = 0;
 var oldAcc;
@@ -172,7 +171,7 @@ $(".submit").on("click",function(){
             id:oldAccID,
             name:name,
             note:remarks,
-            shopid:oldshop,
+            shopID:shopid,
         }
     }else{
          submitUser={
@@ -182,6 +181,7 @@ $(".submit").on("click",function(){
             shopID:shopid,
         }
     }
+    console.log(submitUser)
     $.ajax({
         url: `${commonUrl}/manage/server/save`,
         type: 'POST',
@@ -204,7 +204,6 @@ function  modify(obj){
     oldAcc = x.eq(0).text() 
     let oldName = x.eq(1).text() 
     let oldRemarks = x.eq(2).text()
-    oldshop = x.eq(3).text()
     let oldshopName = x.eq(4).text()
     oldAccID = x.eq(6).text()
     $(".account").val(oldAcc).attr("readOnly","true");

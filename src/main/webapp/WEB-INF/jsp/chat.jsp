@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>通兑商城客服系统</title>
 	<link rel="stylesheet" href="/css/chat.css">
 </head>
 <body>
@@ -15,7 +15,6 @@
 	        </div>
 	        <div class="utils">
 	            <p>聊天人数：<span class="userNumber"></span></p>
-	            <button>注销</button>
 	        </div>
             <ul class="user-name" id="usersName">
               	
@@ -45,7 +44,7 @@
     </div>
     <input type="hidden" id="server" value="${server.id}"/>
     <footer>
-      <p>Copyright © 2017 通兑商城 All Rights Reserved.</p>
+      <p>Copyright © 2017 通兑商城客服系统 All Rights Reserved.</p>
     </footer>
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/js/common.js"></script>

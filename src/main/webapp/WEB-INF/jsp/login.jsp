@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>login</title>
+	<title>通兑商城客服系统</title>
 	<link rel="stylesheet" type="text/css" href="/css/login.css">
 </head>
 <body>
@@ -27,11 +27,11 @@
 		          <span>后台系统</span>
 		        </div>
 		      </div>
-			<button class="loginBtn">登录</button>
+			<button class="loginBtn"><p>登录</p></button>
 		</div>
 	</header>
 	<footer>
-		<p>Copyright © 2017 通兑商城 All Rights Reserved.</p>
+		<p>Copyright © 2017 通兑商城客服系统 All Rights Reserved.</p>
 	</footer>
 <canvas id="background"></canvas>
 <script src="/js/jquery-3.2.1.min.js"></script>
