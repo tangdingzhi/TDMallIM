@@ -6254,4 +6254,546 @@ Caused by: java.lang.ClassNotFoundException: org.apache.logging.log4j.LogManager
  [17:04:35:566][org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup-start] -Starting beans in phase 2147483647
  [17:04:35:583][org.springframework.boot.web.embedded.tomcat.TomcatWebServer-start] -Tomcat started on port(s): 8081 (http)
  [17:04:35:589][com.td.socketserver.WebsocketChatServer-run] -WebsocketChatServer启动了,port:12345
+ [17:09:51:289][org.springframework.boot.StartupInfoLogger-logStarting] -Starting Application on PC-201707270854 with PID 9196 (D:\javaUtil\workSpace\TDMallIM\target\classes started by Administrator in D:\javaUtil\workSpace\TDMallIM)
+ [17:09:51:290][org.springframework.boot.StartupInfoLogger-logStarting] -Running with Spring Boot v2.0.0.BUILD-SNAPSHOT, Spring v5.0.1.BUILD-SNAPSHOT
+ [17:09:51:292][org.springframework.boot.SpringApplication-logStartupProfileInfo] -No active profile set, falling back to default profiles: default
+ [17:09:51:356][org.springframework.context.support.AbstractApplicationContext-prepareRefresh] -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5d3297c2: startup date [Wed Nov 01 17:09:51 CST 2017]; root of context hierarchy
+ [17:09:51:755][org.hibernate.validator.internal.util.Version-<clinit>] -HV000001: Hibernate Validator 6.0.2.Final
+ [17:09:53:222][org.springframework.data.repository.config.RepositoryConfigurationDelegate-multipleStoresDetected] -Multiple Spring Data modules found, entering strict repository configuration mode!
+ [17:09:53:997][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-postProcessAfterInitialization] -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2120608b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ [17:09:54:706][org.springframework.boot.web.embedded.tomcat.TomcatWebServer-initialize] -Tomcat initialized with port(s): 8081 (http)
+ [17:09:55:012][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext-prepareWebApplicationContext] -Root WebApplicationContext: initialization completed in 3658 ms
+ [17:09:55:030][com.td.configuration.DruidConfiguration-druidServlet] -初始化Druid连接池服务！ 
+ [17:09:56:268][org.springframework.boot.web.servlet.ServletRegistrationBean-onStartup] -Mapping servlet: 'statViewServlet' to [/druid/*]
+ [17:09:56:270][org.springframework.boot.web.servlet.ServletRegistrationBean-onStartup] -Mapping servlet: 'dispatcherServlet' to [/]
+ [17:09:56:276][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'characterEncodingFilter' to: [/*]
+ [17:09:56:276][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+ [17:09:56:277][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+ [17:09:56:277][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'requestContextFilter' to: [/*]
+ [17:09:56:278][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'webRequestLoggingFilter' to: [/*]
+ [17:09:56:278][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'webStatFilter' to urls: [/*]
+ [17:09:56:279][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'sessionFilter' to urls: [/*]
+ [17:09:56:305][com.td.filter.CrossDomainFilter-init] -过滤器创建成功
+ [17:09:57:068][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter-initControllerAdviceCache] -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5d3297c2: startup date [Wed Nov 01 17:09:51 CST 2017]; root of context hierarchy
+ [17:09:57:171][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/upimg],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.FileController.upImg(javax.servlet.http.HttpServletRequest)
+ [17:09:57:175][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/log/selLog],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.LogController.selLog(com.td.bean.BaseQuery)
+ [17:09:57:178][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/loginWeb],methods=[GET]}" onto public java.lang.String com.td.controller.LoginController.loginWeb()
+ [17:09:57:181][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/login],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.LoginController.login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+ [17:09:57:182][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/master/web],methods=[GET]}" onto public java.lang.String com.td.controller.MasterController.web()
+ [17:09:57:185][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/save],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ServerController.save(com.td.domain.Server)
+ [17:09:57:186][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/web],methods=[GET]}" onto public java.lang.String com.td.controller.ServerController.web()
+ [17:09:57:186][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/selServer],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ServerController.selServer(com.td.bean.ServerQuery)
+ [17:09:57:187][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/delServer],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ServerController.delServer(java.lang.String)
+ [17:09:57:195][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/shop/register],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ShopController.register(java.lang.String)
+ [17:09:57:195][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/shop/selShop],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ShopController.selShop(com.td.bean.BaseQuery)
+ [17:09:57:203][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+ [17:09:57:205][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [17:09:57:326][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/img/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:09:57:327][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:09:57:327][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:09:57:404][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:09:57:452][org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WelcomePageHandlerMapping-<init>] -Adding welcome page: Optional[class path resource [META-INF/resources/index.html]]
+ [17:09:58:717][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer-startServer] -LiveReload server is running on port 35729
+ [17:09:58:728][org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration-logWarning] -spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+ [17:09:58:824][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/application/status],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+ [17:09:58:824][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/application/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+ [17:09:58:826][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/application],methods=[GET]}" onto private java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest)
+ [17:09:59:330][org.springframework.jmx.export.MBeanExporter-afterSingletonsInstantiated] -Registering beans for JMX exposure on startup
+ [17:09:59:332][org.springframework.jmx.export.MBeanExporter-autodetect] -Bean with name 'dataSource' has been autodetected for JMX exposure
+ [17:09:59:341][org.springframework.jmx.export.MBeanExporter-registerBeanInstance] -Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+ [17:09:59:371][org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup-start] -Starting beans in phase 2147483647
+ [17:09:59:691][org.springframework.boot.web.embedded.tomcat.TomcatWebServer-start] -Tomcat started on port(s): 8081 (http)
+ [17:09:59:749][com.td.socketserver.WebsocketChatServer-run] -WebsocketChatServer启动了,port:12345
+ [17:10:13:890][org.springframework.web.servlet.FrameworkServlet-initServletBean] -FrameworkServlet 'dispatcherServlet': initialization started
+ [17:10:13:925][org.springframework.web.servlet.FrameworkServlet-initServletBean] -FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+ [17:10:18:560][com.alibaba.druid.pool.DruidDataSource-init] -{dataSource-1} inited
+ [17:10:18:568][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,acc,name,note,timeStamp from server where acc = ? and password= ? and status = 1; 
+ [17:10:18:724][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 123(String), 3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b(String)
+ [17:10:18:746][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:10:58:107][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,acc,name,note,timeStamp from server where acc = ? and password= ? and status = 1; 
+ [17:10:58:108][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 123(String), 3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b(String)
+ [17:10:58:113][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:21:03:812][org.springframework.boot.StartupInfoLogger-logStarting] -Starting Application on PC-201707270854 with PID 10052 (D:\javaUtil\workSpace\TDMallIM\target\classes started by Administrator in D:\javaUtil\workSpace\TDMallIM)
+ [17:21:03:814][org.springframework.boot.StartupInfoLogger-logStarting] -Running with Spring Boot v2.0.0.BUILD-SNAPSHOT, Spring v5.0.1.BUILD-SNAPSHOT
+ [17:21:03:818][org.springframework.boot.SpringApplication-logStartupProfileInfo] -No active profile set, falling back to default profiles: default
+ [17:21:03:892][org.springframework.context.support.AbstractApplicationContext-prepareRefresh] -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3f03c14e: startup date [Wed Nov 01 17:21:03 CST 2017]; root of context hierarchy
+ [17:21:04:289][org.hibernate.validator.internal.util.Version-<clinit>] -HV000001: Hibernate Validator 6.0.2.Final
+ [17:21:05:709][org.springframework.data.repository.config.RepositoryConfigurationDelegate-multipleStoresDetected] -Multiple Spring Data modules found, entering strict repository configuration mode!
+ [17:21:06:519][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-postProcessAfterInitialization] -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$af6cdb7d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ [17:21:07:295][org.springframework.boot.web.embedded.tomcat.TomcatWebServer-initialize] -Tomcat initialized with port(s): 8081 (http)
+ [17:21:07:624][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext-prepareWebApplicationContext] -Root WebApplicationContext: initialization completed in 3735 ms
+ [17:21:07:642][com.td.configuration.DruidConfiguration-druidServlet] -初始化Druid连接池服务！ 
+ [17:21:08:800][org.springframework.boot.web.servlet.ServletRegistrationBean-onStartup] -Mapping servlet: 'statViewServlet' to [/druid/*]
+ [17:21:08:802][org.springframework.boot.web.servlet.ServletRegistrationBean-onStartup] -Mapping servlet: 'dispatcherServlet' to [/]
+ [17:21:08:809][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'characterEncodingFilter' to: [/*]
+ [17:21:08:809][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+ [17:21:08:810][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+ [17:21:08:810][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'requestContextFilter' to: [/*]
+ [17:21:08:811][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'webRequestLoggingFilter' to: [/*]
+ [17:21:08:811][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'webStatFilter' to urls: [/*]
+ [17:21:08:811][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'sessionFilter' to urls: [/*]
+ [17:21:08:844][com.td.filter.CrossDomainFilter-init] -过滤器创建成功
+ [17:21:09:602][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter-initControllerAdviceCache] -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3f03c14e: startup date [Wed Nov 01 17:21:03 CST 2017]; root of context hierarchy
+ [17:21:09:714][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/upimg],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.FileController.upImg(javax.servlet.http.HttpServletRequest)
+ [17:21:09:716][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/log/selLog],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.LogController.selLog(com.td.bean.BaseQuery)
+ [17:21:09:717][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/loginWeb],methods=[GET]}" onto public java.lang.String com.td.controller.LoginController.loginWeb()
+ [17:21:09:717][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/login],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.LoginController.login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+ [17:21:09:719][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/master/web],methods=[GET]}" onto public java.lang.String com.td.controller.MasterController.web()
+ [17:21:09:722][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/save],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ServerController.save(com.td.domain.Server)
+ [17:21:09:723][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/web],methods=[GET]}" onto public java.lang.String com.td.controller.ServerController.web()
+ [17:21:09:725][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/selServer],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ServerController.selServer(com.td.bean.ServerQuery)
+ [17:21:09:726][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/delServer],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ServerController.delServer(java.lang.String)
+ [17:21:09:727][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/shop/register],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ShopController.register(java.lang.String)
+ [17:21:09:728][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/shop/selShop],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ShopController.selShop(com.td.bean.BaseQuery)
+ [17:21:09:733][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+ [17:21:09:734][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [17:21:09:866][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/img/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:21:09:866][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:21:09:866][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:21:09:948][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:21:09:999][org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WelcomePageHandlerMapping-<init>] -Adding welcome page: Optional[class path resource [META-INF/resources/index.html]]
+ [17:21:11:297][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer-startServer] -LiveReload server is running on port 35729
+ [17:21:11:308][org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration-logWarning] -spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+ [17:21:11:407][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/application/status],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+ [17:21:11:408][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/application/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+ [17:21:11:409][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/application],methods=[GET]}" onto private java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest)
+ [17:21:11:819][org.springframework.jmx.export.MBeanExporter-afterSingletonsInstantiated] -Registering beans for JMX exposure on startup
+ [17:21:11:821][org.springframework.jmx.export.MBeanExporter-autodetect] -Bean with name 'dataSource' has been autodetected for JMX exposure
+ [17:21:11:830][org.springframework.jmx.export.MBeanExporter-registerBeanInstance] -Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+ [17:21:11:861][org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup-start] -Starting beans in phase 2147483647
+ [17:21:12:206][org.springframework.boot.web.embedded.tomcat.TomcatWebServer-start] -Tomcat started on port(s): 8081 (http)
+ [17:21:12:284][com.td.socketserver.WebsocketChatServer-run] -WebsocketChatServer启动了,port:12345
+ [17:21:18:986][org.springframework.web.servlet.FrameworkServlet-initServletBean] -FrameworkServlet 'dispatcherServlet': initialization started
+ [17:21:19:017][org.springframework.web.servlet.FrameworkServlet-initServletBean] -FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+ [17:21:23:642][com.alibaba.druid.pool.DruidDataSource-init] -{dataSource-1} inited
+ [17:21:23:651][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,acc,name,note,timeStamp from server where acc = ? and password= ? and status = 1; 
+ [17:21:23:784][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 123(String), 3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b(String)
+ [17:21:23:818][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:22:31:560][com.td.handler.TextWebSocketFrameHandler-handlerAdded] -Client:/192.168.1.15:52027加入
+ [17:22:31:560][com.td.handler.TextWebSocketFrameHandler-channelActive] -Client:/192.168.1.15:52027在线
+ [17:22:31:651][com.td.msg.MsgProcess-getMsg] -{"toID":"","type":2,"fromID":"a31f9ccb4575434faa5cf72cbe323b41","fromName":"666"}
+ [17:22:34:212][com.td.handler.TextWebSocketFrameHandler-channelInactive] -Client:/192.168.1.15:52027掉线
+ [17:22:34:212][com.td.handler.TextWebSocketFrameHandler-handlerRemoved] -Client:/192.168.1.15:52027离开
+ [17:22:35:540][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,acc,name,note,timeStamp from server where acc = ? and password= ? and status = 1; 
+ [17:22:35:541][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 123(String), 3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b(String)
+ [17:22:35:542][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:22:35:680][com.td.handler.TextWebSocketFrameHandler-handlerAdded] -Client:/192.168.1.15:52032加入
+ [17:22:35:681][com.td.handler.TextWebSocketFrameHandler-channelActive] -Client:/192.168.1.15:52032在线
+ [17:22:35:704][com.td.msg.MsgProcess-getMsg] -{"toID":"","type":2,"fromID":"a31f9ccb4575434faa5cf72cbe323b41","fromName":"666"}
+ [17:23:05:712][com.td.handler.TextWebSocketFrameHandler-handlerAdded] -Client:/0:0:0:0:0:0:0:1:52033加入
+ [17:23:05:712][com.td.handler.TextWebSocketFrameHandler-channelActive] -Client:/0:0:0:0:0:0:0:1:52033在线
+ [17:23:05:742][com.td.msg.MsgProcess-getMsg] -{"toID":"1","type":1,"fromID":"Tang","fromName":"TangName"}
+ [17:23:05:749][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select * from server where shopID = ? and status = 1; 
+ [17:23:05:750][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 1(String)
+ [17:23:05:754][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 3
+ [17:23:05:756][com.td.msg.MsgProcess$1-run] -给客户TangName分配客服：Server [id=a31f9ccb4575434faa5cf72cbe323b41, acc=123, password=3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b, name=666, note=asa, shopID=1, shopName=null, timeStamp=Wed Oct 18 11:38:13 CST 2017, status=1]
+ [17:23:05:756][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select * from log where ((fromID = ? and toID=?) or (fromID = ? and toID=?)) and DATE_SUB(CURDATE(), INTERVAL 15 DAY) <= timeStamp order by timeStamp desc limit 0,30; 
+ [17:23:05:764][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: a31f9ccb4575434faa5cf72cbe323b41(String), Tang(String), Tang(String), a31f9ccb4575434faa5cf72cbe323b41(String)
+ [17:23:05:777][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:23:05:878][com.td.msg.MsgProcess$1-run] -分配客服耗时：129
+ [17:23:13:000][com.td.msg.MsgProcess-getMsg] -{"toID":"Tang","type":0,"fromID":"a31f9ccb4575434faa5cf72cbe323b41","content":"fafsd","sendTime":1509528192998,"toName":"TangName","fromName":"666","contentType":0,"status":100}
+ [17:23:13:034][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.password,s.name,s.note,s.shopID,s.timeStamp,p.name as shopName from server s left join shop p on p.id = s.shopid where s.id = ?; 
+ [17:23:13:038][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: Tang(String)
+ [17:23:13:039][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 0
+ [17:23:13:040][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.password,s.name,s.note,s.shopID,s.timeStamp,p.name as shopName from server s left join shop p on p.id = s.shopid where s.id = ?; 
+ [17:23:13:041][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: a31f9ccb4575434faa5cf72cbe323b41(String)
+ [17:23:13:042][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:23:13:043][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: insert into log(id,fromID,fromName,toID,toName,timeStamp,content,contentType,shopID,shopName) values (?,?,?,?,?,?,?,?,?,?); 
+ [17:23:13:049][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 1a7ff721f24149f5aef6e055129c5586(String), a31f9ccb4575434faa5cf72cbe323b41(String), 666(String), Tang(String), TangName(String), 2017-11-01 17:23:12.998(Timestamp), fafsd(String), 0(Integer), 1(String), 111(String)
+ [17:23:13:054][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==    Updates: 1
+ [17:23:15:137][com.td.msg.MsgProcess-getMsg] -{"toID":"a31f9ccb4575434faa5cf72cbe323b41","type":0,"fromID":"Tang","content":"dfsad","sendTime":1509528195134,"toName":"666","fromName":"TangName","contentType":0,"status":100}
+ [17:23:15:158][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.password,s.name,s.note,s.shopID,s.timeStamp,p.name as shopName from server s left join shop p on p.id = s.shopid where s.id = ?; 
+ [17:23:15:160][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: a31f9ccb4575434faa5cf72cbe323b41(String)
+ [17:23:15:162][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:23:15:163][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: insert into log(id,fromID,fromName,toID,toName,timeStamp,content,contentType,shopID,shopName) values (?,?,?,?,?,?,?,?,?,?); 
+ [17:23:15:165][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 5f335d556eeb407586a37d0e471ad9f2(String), Tang(String), TangName(String), a31f9ccb4575434faa5cf72cbe323b41(String), 666(String), 2017-11-01 17:23:15.134(Timestamp), dfsad(String), 0(Integer), 1(String), 111(String)
+ [17:23:15:167][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==    Updates: 1
+ [17:23:19:382][com.td.util.FileUtil-upFile] -上传单个文件：http://192.168.1.15:8081/img/dd8929c0f94c4bd8b819e6df5728610f.png
+ [17:23:19:382][com.td.util.FileUtil-upFile] -上传文件：[http://192.168.1.15:8081/img/dd8929c0f94c4bd8b819e6df5728610f.png]
+ [17:23:20:135][com.td.msg.MsgProcess-getMsg] -{"toID":"Tang","type":0,"fromID":"a31f9ccb4575434faa5cf72cbe323b41","content":"http://192.168.1.15:8081/img/dd8929c0f94c4bd8b819e6df5728610f.png","sendTime":1509528200134,"toName":"TangName","fromName":"666","contentType":2,"status":100}
+ [17:23:20:164][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: insert into log(id,fromID,fromName,toID,toName,timeStamp,content,contentType,shopID,shopName) values (?,?,?,?,?,?,?,?,?,?); 
+ [17:23:20:165][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 0a7700afd5b54226aa43055edf1147da(String), a31f9ccb4575434faa5cf72cbe323b41(String), 666(String), Tang(String), TangName(String), 2017-11-01 17:23:20.134(Timestamp), http://192.168.1.15:8081/img/dd8929c0f94c4bd8b819e6df5728610f.png(String), 2(Integer), 1(String), 111(String)
+ [17:23:20:168][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==    Updates: 1
+ [17:23:26:695][com.td.msg.MsgProcess-getMsg] -{"toID":"a31f9ccb4575434faa5cf72cbe323b41","type":0,"fromID":"Tang","sendTime":1509528206694,"toName":"666","fromName":"TangName","contentType":2,"status":100}
+ [17:23:26:723][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: insert into log(id,fromID,fromName,toID,toName,timeStamp,content,contentType,shopID,shopName) values (?,?,?,?,?,?,?,?,?,?); 
+ [17:23:26:724][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 3be39c7039c942d69d1024707d756d69(String), Tang(String), TangName(String), a31f9ccb4575434faa5cf72cbe323b41(String), 666(String), 2017-11-01 17:23:26.694(Timestamp), (String), 2(Integer), 1(String), 111(String)
+ [17:23:26:727][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==    Updates: 1
+ [17:23:36:771][com.td.handler.TextWebSocketFrameHandler-channelInactive] -Client:/0:0:0:0:0:0:0:1:52033掉线
+ [17:23:36:772][com.td.handler.TextWebSocketFrameHandler-handlerRemoved] -Client:/0:0:0:0:0:0:0:1:52033离开
+ [17:23:42:503][com.td.handler.TextWebSocketFrameHandler-channelInactive] -Client:/192.168.1.15:52032掉线
+ [17:23:42:503][com.td.handler.TextWebSocketFrameHandler-handlerRemoved] -Client:/192.168.1.15:52032离开
+ [17:23:45:298][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,acc from master where acc = ? and password= ?; 
+ [17:23:45:299][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 123(String), 3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b(String)
+ [17:23:45:301][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:26:08:795][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,acc from master where acc = ? and password= ?; 
+ [17:26:08:796][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 123(String), 3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b(String)
+ [17:26:08:797][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:26:42:958][org.springframework.boot.StartupInfoLogger-logStarting] -Starting Application on PC-201707270854 with PID 7968 (D:\javaUtil\workSpace\TDMallIM\target\classes started by Administrator in D:\javaUtil\workSpace\TDMallIM)
+ [17:26:42:960][org.springframework.boot.StartupInfoLogger-logStarting] -Running with Spring Boot v2.0.0.BUILD-SNAPSHOT, Spring v5.0.1.BUILD-SNAPSHOT
+ [17:26:42:961][org.springframework.boot.SpringApplication-logStartupProfileInfo] -No active profile set, falling back to default profiles: default
+ [17:26:43:041][org.springframework.context.support.AbstractApplicationContext-prepareRefresh] -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3fad4e37: startup date [Wed Nov 01 17:26:43 CST 2017]; root of context hierarchy
+ [17:26:43:370][org.hibernate.validator.internal.util.Version-<clinit>] -HV000001: Hibernate Validator 6.0.2.Final
+ [17:26:44:990][org.springframework.data.repository.config.RepositoryConfigurationDelegate-multipleStoresDetected] -Multiple Spring Data modules found, entering strict repository configuration mode!
+ [17:26:45:769][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-postProcessAfterInitialization] -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$eca2935f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ [17:26:46:606][org.springframework.boot.web.embedded.tomcat.TomcatWebServer-initialize] -Tomcat initialized with port(s): 8081 (http)
+ [17:26:46:941][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext-prepareWebApplicationContext] -Root WebApplicationContext: initialization completed in 3904 ms
+ [17:26:46:968][com.td.configuration.DruidConfiguration-druidServlet] -初始化Druid连接池服务！ 
+ [17:26:48:262][org.springframework.boot.web.servlet.ServletRegistrationBean-onStartup] -Mapping servlet: 'statViewServlet' to [/druid/*]
+ [17:26:48:264][org.springframework.boot.web.servlet.ServletRegistrationBean-onStartup] -Mapping servlet: 'dispatcherServlet' to [/]
+ [17:26:48:270][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'characterEncodingFilter' to: [/*]
+ [17:26:48:270][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+ [17:26:48:270][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+ [17:26:48:271][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'requestContextFilter' to: [/*]
+ [17:26:48:272][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'webRequestLoggingFilter' to: [/*]
+ [17:26:48:273][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'webStatFilter' to urls: [/*]
+ [17:26:48:273][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'sessionFilter' to urls: [/*]
+ [17:26:48:304][com.td.filter.CrossDomainFilter-init] -过滤器创建成功
+ [17:26:49:106][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter-initControllerAdviceCache] -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3fad4e37: startup date [Wed Nov 01 17:26:43 CST 2017]; root of context hierarchy
+ [17:26:49:250][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/upimg],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.FileController.upImg(javax.servlet.http.HttpServletRequest)
+ [17:26:49:252][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/log/selLog],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.LogController.selLog(com.td.bean.BaseQuery)
+ [17:26:49:253][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/loginWeb],methods=[GET]}" onto public java.lang.String com.td.controller.LoginController.loginWeb()
+ [17:26:49:254][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/login],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.LoginController.login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+ [17:26:49:255][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/master/web],methods=[GET]}" onto public java.lang.String com.td.controller.MasterController.web()
+ [17:26:49:258][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/save],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ServerController.save(com.td.domain.Server)
+ [17:26:49:258][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/web],methods=[GET]}" onto public java.lang.String com.td.controller.ServerController.web()
+ [17:26:49:258][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/selServer],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ServerController.selServer(com.td.bean.ServerQuery)
+ [17:26:49:259][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/delServer],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ServerController.delServer(java.lang.String)
+ [17:26:49:264][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/shop/register],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ShopController.register(java.lang.String)
+ [17:26:49:265][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/shop/selShop],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ShopController.selShop(com.td.bean.BaseQuery)
+ [17:26:49:272][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+ [17:26:49:275][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [17:26:49:346][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/img/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:26:49:346][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:26:49:346][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:26:49:413][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:26:49:473][org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WelcomePageHandlerMapping-<init>] -Adding welcome page: Optional[class path resource [META-INF/resources/index.html]]
+ [17:26:50:901][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer-startServer] -LiveReload server is running on port 35729
+ [17:26:50:910][org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration-logWarning] -spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+ [17:26:51:001][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/application/status],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+ [17:26:51:002][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/application/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+ [17:26:51:003][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/application],methods=[GET]}" onto private java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest)
+ [17:26:51:308][org.springframework.jmx.export.MBeanExporter-afterSingletonsInstantiated] -Registering beans for JMX exposure on startup
+ [17:26:51:310][org.springframework.jmx.export.MBeanExporter-autodetect] -Bean with name 'dataSource' has been autodetected for JMX exposure
+ [17:26:51:320][org.springframework.jmx.export.MBeanExporter-registerBeanInstance] -Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+ [17:26:51:356][org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup-start] -Starting beans in phase 2147483647
+ [17:26:51:719][org.springframework.boot.web.embedded.tomcat.TomcatWebServer-start] -Tomcat started on port(s): 8081 (http)
+ [17:26:51:778][com.td.socketserver.WebsocketChatServer-run] -WebsocketChatServer启动了,port:12345
+ [17:26:53:589][org.springframework.web.servlet.FrameworkServlet-initServletBean] -FrameworkServlet 'dispatcherServlet': initialization started
+ [17:26:53:620][org.springframework.web.servlet.FrameworkServlet-initServletBean] -FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+ [17:27:23:672][com.alibaba.druid.pool.DruidDataSource-init] -{dataSource-1} inited
+ [17:27:23:679][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,acc from master where acc = ? and password= ?; 
+ [17:27:23:811][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 123(String), 3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b(String)
+ [17:27:23:830][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:28:14:745][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,acc from master where acc = ? and password= ?; 
+ [17:28:14:746][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 123(String), 3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b(String)
+ [17:28:14:749][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:28:44:305][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,acc from master where acc = ? and password= ?; 
+ [17:28:44:307][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 123(String), 3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b(String)
+ [17:28:44:311][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:29:31:073][org.springframework.context.support.AbstractApplicationContext-doClose] -Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3fad4e37: startup date [Wed Nov 01 17:26:43 CST 2017]; root of context hierarchy
+ [17:29:31:077][org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup-stop] -Stopping beans in phase 2147483647
+ [17:29:31:640][org.springframework.beans.factory.support.DisposableBeanAdapter-destroy] -Invocation of destroy method failed on bean with name 'classPathFileSystemWatcher': java.lang.NullPointerException
+ [17:29:31:659][org.springframework.jmx.export.MBeanExporter-destroy] -Unregistering JMX-exposed beans on shutdown
+ [17:29:31:660][org.springframework.jmx.support.MBeanRegistrationSupport-unregisterBeans] -Unregistering JMX-exposed beans
+ [17:29:31:669][com.td.socketserver.WebsocketChatServer-stop] -WebsocketChatServer 关闭了
+ [17:29:31:670][com.td.socketserver.WebsocketChatServer-stop] -WebsocketChatServer 关闭了
+ [17:29:31:803][org.springframework.boot.StartupInfoLogger-logStarted] -Started Application in 169.177 seconds (JVM running for 169.701)
+ [17:29:32:737][org.springframework.boot.StartupInfoLogger-logStarting] -Starting Application on PC-201707270854 with PID 7968 (D:\javaUtil\workSpace\TDMallIM\target\classes started by Administrator in D:\javaUtil\workSpace\TDMallIM)
+ [17:29:32:737][org.springframework.boot.StartupInfoLogger-logStarting] -Running with Spring Boot v2.0.0.BUILD-SNAPSHOT, Spring v5.0.1.BUILD-SNAPSHOT
+ [17:29:32:737][org.springframework.boot.SpringApplication-logStartupProfileInfo] -No active profile set, falling back to default profiles: default
+ [17:29:32:743][org.springframework.context.support.AbstractApplicationContext-prepareRefresh] -Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4c4f004e: startup date [Wed Nov 01 17:29:32 CST 2017]; root of context hierarchy
+ [17:29:33:911][org.springframework.data.repository.config.RepositoryConfigurationDelegate-multipleStoresDetected] -Multiple Spring Data modules found, entering strict repository configuration mode!
+ [17:29:34:087][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-postProcessAfterInitialization] -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$eca2935f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ [17:29:34:220][org.springframework.boot.web.embedded.tomcat.TomcatWebServer-initialize] -Tomcat initialized with port(s): 8081 (http)
+ [17:29:34:346][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext-prepareWebApplicationContext] -Root WebApplicationContext: initialization completed in 1603 ms
+ [17:29:34:370][com.td.configuration.DruidConfiguration-druidServlet] -初始化Druid连接池服务！ 
+ [17:29:34:768][org.springframework.boot.web.servlet.ServletRegistrationBean-onStartup] -Mapping servlet: 'statViewServlet' to [/druid/*]
+ [17:29:34:769][org.springframework.boot.web.servlet.ServletRegistrationBean-onStartup] -Mapping servlet: 'dispatcherServlet' to [/]
+ [17:29:34:769][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'characterEncodingFilter' to: [/*]
+ [17:29:34:770][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+ [17:29:34:770][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+ [17:29:34:770][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'requestContextFilter' to: [/*]
+ [17:29:34:770][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'webRequestLoggingFilter' to: [/*]
+ [17:29:34:770][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'webStatFilter' to urls: [/*]
+ [17:29:34:770][org.springframework.boot.web.servlet.AbstractFilterRegistrationBean-configure] -Mapping filter: 'sessionFilter' to urls: [/*]
+ [17:29:34:777][com.td.filter.CrossDomainFilter-init] -过滤器创建成功
+ [17:29:35:161][org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter-initControllerAdviceCache] -Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4c4f004e: startup date [Wed Nov 01 17:29:32 CST 2017]; root of context hierarchy
+ [17:29:35:198][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/upimg],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.FileController.upImg(javax.servlet.http.HttpServletRequest)
+ [17:29:35:199][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/log/selLog],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.LogController.selLog(com.td.bean.BaseQuery)
+ [17:29:35:201][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/loginWeb],methods=[GET]}" onto public java.lang.String com.td.controller.LoginController.loginWeb()
+ [17:29:35:202][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/login],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.LoginController.login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+ [17:29:35:202][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/master/web],methods=[GET]}" onto public java.lang.String com.td.controller.MasterController.web()
+ [17:29:35:205][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/save],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ServerController.save(com.td.domain.Server)
+ [17:29:35:205][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/web],methods=[GET]}" onto public java.lang.String com.td.controller.ServerController.web()
+ [17:29:35:206][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/selServer],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ServerController.selServer(com.td.bean.ServerQuery)
+ [17:29:35:206][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/server/delServer],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ServerController.delServer(java.lang.String)
+ [17:29:35:207][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/shop/register],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ShopController.register(java.lang.String)
+ [17:29:35:207][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/manage/shop/selShop],methods=[POST]}" onto public net.sf.json.JSONObject com.td.controller.ShopController.selShop(com.td.bean.BaseQuery)
+ [17:29:35:209][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+ [17:29:35:210][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+ [17:29:35:244][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/img/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:29:35:245][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:29:35:245][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:29:35:275][org.springframework.web.servlet.handler.AbstractUrlHandlerMapping-registerHandler] -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+ [17:29:35:294][org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WelcomePageHandlerMapping-<init>] -Adding welcome page: Optional[class path resource [META-INF/resources/index.html]]
+ [17:29:35:748][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer-startServer] -LiveReload server is running on port 35729
+ [17:29:35:752][org.springframework.boot.starter.redis.RedisStarterDeprecationWarningAutoConfiguration-logWarning] -spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+ [17:29:35:796][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/application/status],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+ [17:29:35:798][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/application/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+ [17:29:35:799][org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry-register] -Mapped "{[/application],methods=[GET]}" onto private java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest)
+ [17:29:36:072][org.springframework.jmx.export.MBeanExporter-afterSingletonsInstantiated] -Registering beans for JMX exposure on startup
+ [17:29:36:073][org.springframework.jmx.export.MBeanExporter-autodetect] -Bean with name 'dataSource' has been autodetected for JMX exposure
+ [17:29:36:076][org.springframework.jmx.export.MBeanExporter-registerBeanInstance] -Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+ [17:29:36:078][org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup-start] -Starting beans in phase 2147483647
+ [17:29:36:228][org.springframework.boot.web.embedded.tomcat.TomcatWebServer-start] -Tomcat started on port(s): 8081 (http)
+ [17:29:36:234][com.td.socketserver.WebsocketChatServer-run] -WebsocketChatServer启动了,port:12345
+ [17:29:42:405][org.springframework.web.servlet.FrameworkServlet-initServletBean] -FrameworkServlet 'dispatcherServlet': initialization started
+ [17:29:42:409][org.springframework.web.servlet.FrameworkServlet-initServletBean] -FrameworkServlet 'dispatcherServlet': initialization completed in 4 ms
+ [17:29:42:461][com.alibaba.druid.pool.DruidDataSource-init] -{dataSource-2} inited
+ [17:29:42:465][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,acc from master where acc = ? and password= ?; 
+ [17:29:42:466][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 123(String), 3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b(String)
+ [17:29:42:468][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:29:46:586][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,acc from master where acc = ? and password= ?; 
+ [17:29:46:586][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 123(String), 3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b(String)
+ [17:29:46:589][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:29:46:923][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:29:46:926][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:29:46:933][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:29:46:936][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:29:46:944][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:29:46:953][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:29:47:022][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:29:47:024][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:29:47:029][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:29:47:030][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:29:47:032][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:29:47:049][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:30:44:286][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from shop WHERE name like '%1%' 
+ [17:30:44:288][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:30:44:290][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:30:44:291][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,name,timeStamp from shop WHERE name like '%1%' order by timeStamp desc limit 0,10; 
+ [17:30:44:292][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:30:44:295][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 4
+ [17:30:45:085][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from shop 
+ [17:30:45:086][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:30:45:087][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:30:45:088][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,name,timeStamp from shop order by timeStamp desc limit 0,10; 
+ [17:30:45:089][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:30:45:091][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 4
+ [17:30:47:069][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: insert ignore into server(id,acc,password,name,note,shopID,timeStamp) values(?,?,?,?,?,?,now()); 
+ [17:30:47:074][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 032a356bea4f443a8c8d8d25d72db391(String), ada(String), cdf4a007e2b02a0c49fc9b7ccfbb8a10c644f635e1765dcf2a7ab794ddc7edac(String), fdsads(String), 123132(String), 123(String)
+ [17:30:47:078][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==    Updates: 1
+ [17:30:47:085][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:30:47:085][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:30:47:086][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:30:47:088][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:30:47:089][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:30:47:092][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:30:47:109][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:30:47:109][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:30:47:112][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:30:47:114][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:30:47:115][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:30:47:119][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:31:01:383][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: insert ignore into server(id,acc,password,name,note,shopID,timeStamp) values(?,?,?,?,?,?,now()); 
+ [17:31:01:384][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 52fb4f101ba94132a88deb338fa7562c(String), 6576(String), cdf4a007e2b02a0c49fc9b7ccfbb8a10c644f635e1765dcf2a7ab794ddc7edac(String), 7457(String), 457(String), 1231(String)
+ [17:31:01:390][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==    Updates: 1
+ [17:31:01:397][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:31:01:398][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:31:01:399][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:31:01:400][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:31:01:400][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:31:01:403][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:31:01:418][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:31:01:419][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:31:01:420][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:31:01:420][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:31:01:421][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:31:01:423][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:34:17:850][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:34:17:851][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:17:852][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:34:17:856][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:34:17:857][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:17:860][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:34:17:912][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:34:17:912][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:17:914][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:34:17:916][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:34:17:916][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:17:919][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:34:22:310][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from shop WHERE name like '%1%' 
+ [17:34:22:310][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:22:312][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:34:22:312][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,name,timeStamp from shop WHERE name like '%1%' order by timeStamp desc limit 0,10; 
+ [17:34:22:313][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:22:314][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 4
+ [17:34:27:527][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from shop WHERE name like '%1231%' 
+ [17:34:27:528][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:27:529][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:34:27:530][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,name,timeStamp from shop WHERE name like '%1231%' order by timeStamp desc limit 0,10; 
+ [17:34:27:531][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:27:532][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 2
+ [17:34:27:670][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from shop WHERE name like '%123%' 
+ [17:34:27:671][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:27:672][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:34:27:673][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,name,timeStamp from shop WHERE name like '%123%' order by timeStamp desc limit 0,10; 
+ [17:34:27:674][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:27:676][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 3
+ [17:34:27:806][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from shop WHERE name like '%12%' 
+ [17:34:27:807][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:27:809][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:34:27:811][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,name,timeStamp from shop WHERE name like '%12%' order by timeStamp desc limit 0,10; 
+ [17:34:27:816][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:27:819][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 3
+ [17:34:27:908][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from shop WHERE name like '%1%' 
+ [17:34:27:909][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:27:910][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:34:27:911][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,name,timeStamp from shop WHERE name like '%1%' order by timeStamp desc limit 0,10; 
+ [17:34:27:911][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:27:913][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 4
+ [17:34:28:014][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from shop 
+ [17:34:28:014][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:28:016][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:34:28:017][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,name,timeStamp from shop order by timeStamp desc limit 0,10; 
+ [17:34:28:017][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:28:019][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 4
+ [17:34:29:477][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from shop WHERE name like '%1%' 
+ [17:34:29:477][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:29:478][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:34:29:479][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,name,timeStamp from shop WHERE name like '%1%' order by timeStamp desc limit 0,10; 
+ [17:34:29:480][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:29:481][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 4
+ [17:34:29:652][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from shop WHERE name like '%11%' 
+ [17:34:29:653][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:29:655][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:34:29:657][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,name,timeStamp from shop WHERE name like '%11%' order by timeStamp desc limit 0,10; 
+ [17:34:29:657][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:29:659][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 2
+ [17:34:29:795][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from shop WHERE name like '%111%' 
+ [17:34:29:796][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:29:797][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:34:29:798][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,name,timeStamp from shop WHERE name like '%111%' order by timeStamp desc limit 0,10; 
+ [17:34:29:799][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:29:801][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:34:58:911][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from shop WHERE name like '%111%' 
+ [17:34:58:912][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:58:913][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:34:58:914][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,name,timeStamp from shop WHERE name like '%111%' order by timeStamp desc limit 0,10; 
+ [17:34:58:914][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:34:58:915][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:35:04:595][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:35:04:596][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:04:603][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:35:04:604][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:35:04:604][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:04:607][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:35:04:667][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:35:04:668][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:04:673][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:35:04:675][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:35:04:675][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:04:679][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:35:14:990][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from shop WHERE name like '%1%' 
+ [17:35:14:990][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:14:991][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:35:14:993][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,name,timeStamp from shop WHERE name like '%1%' order by timeStamp desc limit 0,10; 
+ [17:35:14:993][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:14:995][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 4
+ [17:35:16:510][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: insert ignore into server(id,acc,password,name,note,shopID,timeStamp) values(?,?,?,?,?,?,now()); 
+ [17:35:16:511][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 601d597ff60b4000805bd0438fb727e1(String), 12312(String), cdf4a007e2b02a0c49fc9b7ccfbb8a10c644f635e1765dcf2a7ab794ddc7edac(String), 3123123(String), 123123(String), 3492cc2708004acd953c31d321d9129a(String)
+ [17:35:16:515][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==    Updates: 1
+ [17:35:16:521][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:35:16:521][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:16:522][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:35:16:524][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:35:16:524][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:16:526][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:35:16:539][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:35:16:540][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:16:541][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:35:16:542][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:35:16:542][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:16:545][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:35:37:180][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: update server SET name=?, note=? where ID=? 
+ [17:35:37:182][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 1231231(String), 123123(String), 601d597ff60b4000805bd0438fb727e1(String)
+ [17:35:37:188][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==    Updates: 1
+ [17:35:37:195][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:35:37:195][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:37:196][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:35:37:198][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:35:37:198][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:37:200][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:35:37:214][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:35:37:214][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:37:215][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:35:37:216][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:35:37:216][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:37:219][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:35:42:101][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: update server SET name=?, note=? where ID=? 
+ [17:35:42:101][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 1231231(String), 123123(String), 601d597ff60b4000805bd0438fb727e1(String)
+ [17:35:42:107][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==    Updates: 1
+ [17:35:42:112][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:35:42:113][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:42:114][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:35:42:116][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:35:42:117][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:42:119][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:35:42:134][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:35:42:134][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:42:136][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:35:42:137][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:35:42:137][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:35:42:140][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:36:16:977][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:36:16:978][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:36:16:982][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:36:16:984][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:36:16:985][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:36:16:988][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:36:17:058][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:36:17:059][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:36:17:060][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:36:17:061][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:36:17:062][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:36:17:070][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:36:20:756][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from shop WHERE name like '%1231%' 
+ [17:36:20:757][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:36:20:758][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:36:20:758][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,name,timeStamp from shop WHERE name like '%1231%' order by timeStamp desc limit 0,10; 
+ [17:36:20:759][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:36:20:760][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 2
+ [17:37:03:993][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:37:03:993][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:37:03:998][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:37:03:999][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:37:03:999][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:37:04:003][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:37:04:028][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:37:04:028][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:37:04:031][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:37:04:032][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:37:04:033][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:37:04:036][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:37:08:621][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from shop WHERE name like '%1231%' 
+ [17:37:08:621][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:37:08:624][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:37:08:626][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select id,name,timeStamp from shop WHERE name like '%1231%' order by timeStamp desc limit 0,10; 
+ [17:37:08:626][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:37:08:627][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 2
+ [17:37:10:520][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: update server SET name=?, note=? where ID=? 
+ [17:37:10:520][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 1231231(String), 123123(String), 601d597ff60b4000805bd0438fb727e1(String)
+ [17:37:10:524][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==    Updates: 1
+ [17:37:10:533][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:37:10:534][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:37:10:535][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:37:10:536][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:37:10:536][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:37:10:538][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
+ [17:37:10:554][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select count(id) from server where status = 1 
+ [17:37:10:554][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:37:10:556][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 1
+ [17:37:10:557][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==>  Preparing: select s.id,s.acc,s.name,s.note,s.shopID,sp.name shopName,s.timeStamp from server s left join shop sp on s.shopID=sp.id where s.status = 1 order by s.timeStamp desc limit 0,10; 
+ [17:37:10:557][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -==> Parameters: 
+ [17:37:10:559][org.apache.ibatis.logging.jdbc.BaseJdbcLogger-debug] -<==      Total: 10
  
