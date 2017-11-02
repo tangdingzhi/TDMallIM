@@ -105,18 +105,30 @@ function showMsg(data){
             <td>${data[i].shopName}</td>
             <td>${nowTime}</td>
             <td class="dnone">${data[i].id}</td>
-            <td><button onclick="modify(this)">修改</button><button onclick="showzhi(this)">删除</button></td>
+            <td><button onclick="modify(this)" class="btn btn-info">修改</button><button onclick="showzhi(this)" class="btn btn-danger">删除</button></td>
         </tr>`
     }
     $(".massge").append(str)
 }
 //删除
-function  showzhi(obj){  
+function  showzhi(obj){ 
+    $(".delBox").css("display","flex")  
+    $(".del").on("click",function(){
+        $(".delBox").css("display","none")
+        delThis(obj)
+    })
+    $(".undel").on("click",function(){
+        $(".delBox").css("display","none")  
+    })
+};  
+function  delThis(obj) {
     let x = $(obj).parent().parent().find("td");  
     let y = x.eq(6).text()  
     let userID={
         id:y
     } 
+    console.log(userID,y)
+
     $.ajax({
         url: `${commonUrl}/manage/server/delServer`,
         type: 'POST',
@@ -129,7 +141,7 @@ function  showzhi(obj){
         error: function (data) {
         }
     })
-};  
+} 
 
 //渲染时间
 function mend(unixTimestamp){

@@ -2,58 +2,51 @@
 	margin: 0;
 	padding: 0;
 }
-body{
-	background: #fff;
+body, html {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+}
+#background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -100;
 }
 
 /*  导航栏样式   */
 header{
-	height: 80px;
-	background: rgba(30, 160, 236, 1);
+	height: 100px;
+	position: fixed;
 }
 header p{
 	width: 600px;
 	margin: 0 auto;
 	font-size: 22px;
 	letter-spacing: 14px;
-	color: #eee;
-	line-height: 80px;
+	color: #e4e4e4;
+	line-height: 100px;
 	text-align: center;
 }
 /*  内容样式   */
 .content{
-	width: 1126px;
+	width: 1220px;
 	height: auto;
-	margin: 50px auto 40px;
+	padding: 30px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	position: fixed;
+	top: 120px;
+	left:18%;
+	background: rgba(255,255,255,1);
 }
-.content tr{
-	width: 1126px;
-	display: flex;
-	justify-content: space-between;
-}
-.content tr th{
-	width: 200px;
-	height: 40px;
-	line-height: 40px;
-	color: #eee;
-	background: rgba(64, 158, 255, 0.6);
-}
-.content tr td{
-	width: 200px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	background: rgba(64, 158, 255, 0.21);
-	border-bottom: 1px solid #c4c4c4;
-}
-.content tr td:nth-child(4){
-	width: 300px;
-}
-.content tr th:nth-child(3){
-	width: 360px;
+.delBox{
+	display: none;
 }
 #input-button{
 	margin:0 0 10px;
@@ -62,67 +55,43 @@ header p{
 }
 #input-button input{
 	width: 206px;
-	height: 28px;
+	height: 32px;
 	padding-left: 12px;
 	margin-right: 6px;
-	background-color: rgba(244, 244, 244, 1);
+	background-color: rgba(255, 255, 255, 1);
 	border-radius: 4px 4px 4px 4px;
 	border: solid 1px rgba(221, 221, 221, 1);
 }
-#input-button button{
-	width: 60px;
-	height: 28px;
-	margin-left: 10px;
-	border-radius: 4px 4px 4px 4px;
-	background-color: rgba(30, 160, 236, 1);
-	border: none;
-	outline: none;
-	font-size: 14px;
-	color: #fff;
-}
-#input-button button:hover{
-	background: rgba(30, 160, 236, 0.7);
-}
-#input-button button:active{
-	background: #3a8ee6;
-}
-.content tbody button{
-	width: 54px;
-	height: 30px;
-	border-radius: 4px;
-	margin: 6px 0 0 10px;
-	border: none;
-	outline: none;
-	color: #f4f4f4;
-	background-color: rgba(64, 158, 255, 1);
-}
-.content button:hover{
-	background: #66b1ff;
-}
-.content button:active{
-    background: #3a8ee6;
-}
-.massge button:nth-child(2){
-	background-color: rgba(250, 85, 85, 1);
-}
-.massge button:nth-child(2):hover{
-	background: #fb7777;
-}
-.massge button:nth-child(2):active{
-    background: #e14d4d;
+.content button{
+	margin-right: 10px; 
 }
 .dnone{
 	display: none;
 }
 .addBox{
-	padding: 20px;
+	padding: 30px 40px 20px;
 	border:1px solid #898989;
 	background: #fff;
 	position: fixed;
-	left: 40%;
+	left: 44%;
 	border-radius: 6px;
 	box-shadow: 10px 10px 10px #888888;
 	display: none;
+}
+.delBox{
+	padding: 40px 20px;
+	border:1px solid #898989;
+	background: #fff;
+	position: fixed;
+	left: 48%;
+	border-radius: 6px;
+	box-shadow: 10px 10px 10px #888888;
+	display: none;
+}
+.delBox p {
+	line-height: 34px;
+	margin: 0;
+	margin-right: 50px;
 }
 .addBox div{
 	display: flex;
@@ -209,16 +178,15 @@ header p{
 footer{
 	width: 100%;
 	height: 100px;
-	background-color: rgba(64, 158, 255, 1);
 	position: fixed;
 	bottom: 0;
 }
 footer p{
-  width: 1126px;
-  text-align: center;
-  margin: 0 auto;
-  font-size: 16px;
-  line-height: 100px;
-  letter-spacing: 0.6px;
-  color: #ffffff;
+	width: 1126px;
+	font-size: 16px;
+	line-height: 100px;
+	text-align: center;
+	margin: 0 auto;
+	letter-spacing: 0.6px;
+	color: #e4e4e4;
 }

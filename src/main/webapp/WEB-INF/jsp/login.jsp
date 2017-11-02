@@ -39,7 +39,5 @@
 <script src="/js/common.js"></script>
 <script src="/js/login.js"></script>
 <script async type="text/javascript" src="/js/background.js"></script>
-<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
-</div>
 </body>
 </html>

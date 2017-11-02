@@ -1,7 +1,10 @@
 package com.td.configuration;
 
-import com.alibaba.druid.pool.DruidDataSourceFactory;
-import com.td.util.LogUtil;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.sql.DataSource;
 
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
@@ -10,27 +13,24 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
-import org.springframework.core.io.support.ResourcePatternResolver;
 
-import javax.sql.DataSource;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+import com.alibaba.druid.pool.DruidDataSourceFactory;
+import com.td.util.LogUtil;
 
 @Configuration
 @MapperScan(basePackages = "com.td.mapper") // 指定mapper类位置
 public class MyBatisConfig {
 	@Value("${spring.datasource.url}")
-	String dbUrl;
+	private String dbUrl;
 	@Value("${spring.datasource.username}")
-	String userName;
+	private String userName;
 	@Value("${spring.datasource.password}")
-	String password;
-
+	private String password;
 	@Value("${spring.datasource.driverClassName}")
-	String driverClassName;
+	private String driverClassName;
+	@Value("${mybatis.mapperLocations}")
+	private String MAPPER_PATH;
 	private static String MYBATIS_CONFIG = "mybatis_config.xml";
-	private static String MAPPER_PATH = "/mapper/*.xml";
 
 	@Bean
 	public SqlSessionFactoryBean createSqlSessionFactoryBean() throws IOException {
@@ -38,12 +38,12 @@ public class MyBatisConfig {
 		// 设置mybatis configuration 扫描路径
 		sqlSessionFactoryBean.setConfigLocation(new ClassPathResource(MYBATIS_CONFIG));
 		// 添加mapper 扫描路径
-		PathMatchingResourcePatternResolver pathMatchingResourcePatternResolver = new PathMatchingResourcePatternResolver();
-		String packageSearchPath = ResourcePatternResolver.CLASSPATH_ALL_URL_PREFIX + MAPPER_PATH;
-		sqlSessionFactoryBean.setMapperLocations(pathMatchingResourcePatternResolver.getResources(packageSearchPath));
+		// String packageSearchPath =
+		// ResourcePatternResolver.CLASSPATH_ALL_URL_PREFIX + MAPPER_PATH;
+		sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MAPPER_PATH));
 		// 设置datasource
 		sqlSessionFactoryBean.setDataSource(dataSource());
-		LogUtil.info("配置MyBatis和druid完成！");
+		LogUtil.info("配置druid完成！");
 		return sqlSessionFactoryBean;
 	}
 
